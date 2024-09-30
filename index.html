@@ -99,6 +99,15 @@
     <div id="viewport-params-size"></div>
     <div id="viewport-params-expand"></div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+
+    <script>
+        async function abc(){
+            const respn= await axios.get("https://node.poxscan.io/api/status");
+            console.log(respn.data);
+        }
+        abc()
+    </script>
     <script>
         // Init TWA
         Telegram.WebApp.ready();
